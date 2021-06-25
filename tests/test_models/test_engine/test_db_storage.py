@@ -90,8 +90,21 @@ class TestFileStorage(unittest.TestCase):
     @unittest.skipIf(models.storage_t != 'db', "not testing db storage")
     def test_get(self):
         """test that gets an object from database"""
-        
+        state = State(name="Oklahoma")
+        models.storage._DBStorage__session.add(state)
+        models.storage._DBStorage__session.commit()
+        self.assertIs(models.storage.get("State", state.id), state)
+        self.assertIs(models.storage.get("State", "not an id"), state)
+        self.assertIs(models.storage.get("State", state.id), None)
+        models.storage._DBStorage__session.delete(state)
 
     @unittest.skipIf(models.storage_t != 'db', "not testing db storage")
     def test_count(self):
         """test that counts the number of cls in object"""
+        state = State(name="Oklahoma")
+        models.storage._DBStorage__session.add(state)
+        models.storage._DBStorage__session.commit()
+        self.assertIs(models.storage.get("State", state.id), state)
+        self.assertIs(models.storage.get("State", "not an id"), state)
+        self.assertIs(models.storage.get("State", state.id), None)
+        models.storage._DBStorage__session.delete(state)
