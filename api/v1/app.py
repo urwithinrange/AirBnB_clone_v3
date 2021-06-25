@@ -1,4 +1,4 @@
-#!/uysr/bin/python3
+#!/usr/bin/python3
 """this will be descriptive text"""
 from flask import Flask
 from models import storage
