@@ -154,7 +154,7 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time. 
 
 ## Authors
-Derek Clemens - [Github](https://github.com/urinrange) / [Twitter](https://twitter.com/derekclemens4)
+Derek Clemens - [Github](https://github.com/urwithinrange) / [Twitter](https://twitter.com/derekclemens4)
 Chad Calvert - [Github](https://github.com/calvert1212) / [Twitter](https://twitter.com/calvert1212)
 
 Second part of Airbnb: 
